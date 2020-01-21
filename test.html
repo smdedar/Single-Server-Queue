@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Single Server Queue</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="script.js"></script><script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://kit.fontawesome.com/b1cb080696.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #savebtn{
+            display:block;
+            position: absolute;
+            right: 10px;
+        }
+        #count{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="HTMLtoPDF" class="container h-100 ">
+
+        <div class="row h-100 justify-content-center align-self-center">
+            <button id="testStart" class="btn btn-outline-success" onclick="getRandomArrivalTime(1,10); getRandomServiceTime(1,5),graphShow()" type="button"><i class="fas fa-play"></i> Run Single Server Queue</button>
+            <button  id="savebtn" onclick="HTMLtoPDF()"class="btn btn-outline-primary" disabled type="button"><i class="fas fa-file-pdf"></i> Save</button>
+        </div >
+        
+        <br>
+        <br>
+        <div class="justify-content-center">
+            <table id="example" class="display" width="100%"></table>
+            <br>
+            <br>
+            <div id="chartContainer" style="height: 350px; max-width: 800px; margin: 0px auto;"> 
+                
+            </div>
+            <br>
+            <br>
+            <div>
+                <h5 id="avgWaitingTime"> </h5>
+                <h5 id="avgServicetime"> </h5>
+            </div>
+        </div>
+    
+
+    <!-- <body oncontextmenu="return false;"> -->
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">Developed By:
+                <a href="https://www.facebook.com/thededar">Dedar Alam</a>
+
+
+
+                <div id="count">
+                   
+<!-- hitwebcounter Code START -->
+<a href="http://www.hitwebcounter.com" target="_blank">
+    <img src="http://hitwebcounter.com/counter/counter.php?page=7127413&style=0009&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
+    </a>                                        <br/>
+                                            <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="" 
+                                            target="_blank" style="font-family: ; 
+                                            font-size: px; color: #; text-decoration:  ;">                                        
+                                            </a>   
+                                
+                                
+                                  
+
+                </div>
+
+                     
+            </div>
+           
+
+
+
+        </footer>
+        <!-- Footer -->
+    </div>
+    <script src="jspdf.js"></script>
+	<script src="pdfFromHTML.js"></script>
+</body>
+
+
+
+</html>
